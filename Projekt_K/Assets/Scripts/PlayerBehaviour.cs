@@ -1,9 +1,12 @@
 using UnityEngine;
 /*
-stelute in functie de timpul pe care l faci
+stelute in functie de timpul pe care l scoti
 inamici care trag in tine
-pagina de levels unde se salveaza pt fiecare lvl stelultele pe care le faci
 steluta default daca termini lvl indiferent de timp, ca sa poti trece mai departe
+tutorial (daca nu l faci, nu se deschide butonu de level)
+loading screen
+podeaua
+secret room in level 4 in care daca intri, sa primesti o a patra steluta
  */
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -17,7 +20,7 @@ public class PlayerBehaviour : MonoBehaviour
     private Vector3 currentPosition;
     private Vector2 var;
     private float force;
-    private float maxforce = 200f;
+    private float maxforce = 400f;
     [SerializeField]
     private LineRenderer lr;
     void Start()
@@ -47,7 +50,7 @@ public class PlayerBehaviour : MonoBehaviour
             }
             currentPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
             Vector3 direction1 = (new Vector3(currentPosition.x - transform.position.x, currentPosition.y - transform.position.y, 0)).normalized;
-            var v = Vector3.Lerp(transform.position, transform.position + direction1 * 3, force / 500f);
+            var v = Vector3.Lerp(transform.position, transform.position + direction1 * 3, force / 600f);
             //Debug.Log(currentPosition);
             RenderLine(transform.position, v);
         }
