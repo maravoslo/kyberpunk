@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9188780962517298935}
   - component: {fileID: 9188780962517298930}
   - component: {fileID: 9188780962517298929}
+  - component: {fileID: 1587528038}
   m_Layer: 5
   m_Name: TextTime
   m_TagString: Untagged
@@ -25,7 +26,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9188780962517298934}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -67,11 +68,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 60
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 60
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -79,3 +80,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Time 00:00:00
+--- !u!114 &1587528038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188780962517298934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4930db30908ae41ba0cfddbb541172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimerP: {fileID: 9188780962517298929}
+  TimerFi: {fileID: 0}
+  TimerFa: {fileID: 0}
+  Star0: {fileID: 0}
+  Star1: {fileID: 0}
+  Star2: {fileID: 0}
+  time: 0

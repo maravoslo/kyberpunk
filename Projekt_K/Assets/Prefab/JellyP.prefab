@@ -90,8 +90,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.8695652
-        value: 1
+        time: 0.622266
+        value: 0.5602417
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -103,16 +103,16 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 0.8489919, g: 0, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 61873
-      ctime1: 65535
+      ctime0: 33346
+      ctime1: 61873
       ctime2: 0
       ctime3: 0
       ctime4: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 4964869523380961468}
   - component: {fileID: 4964869523380961459}
   - component: {fileID: 4964869523380961471}
-  - component: {fileID: 7812029577311595790}
+  - component: {fileID: 885546401}
   m_Layer: 3
   m_Name: JellyP
   m_TagString: PlayerTag
@@ -169,7 +169,7 @@ Transform:
   m_GameObject: {fileID: 4964869523380961462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.03, y: -0.045048, z: -7.4357}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children:
   - {fileID: 4964869523329178560}
   m_Father: {fileID: 0}
@@ -238,12 +238,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd6b50d0b9bc5f4493515e346472752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
   rb2d: {fileID: 4964869523380961459}
-  PanelFinish: {fileID: 5045802183639493870, guid: 9cfc89a17830c8a41a4fc2efaea3be2d, type: 3}
-  PanelFailed: {fileID: 8096604173529853281, guid: c50bc337060a8364c9ab3b576f6fbe63, type: 3}
-  TextTime: {fileID: 5467375909929761398, guid: 5173ccf08ba1ac14f8397ac5eaa8b11f, type: 3}
+  PanelFinish: {fileID: 0}
+  PanelFailed: {fileID: 0}
+  TextTime: {fileID: 0}
   lr: {fileID: 4964869523329178567}
+  ceva: {fileID: 0}
 --- !u!58 &4964869523380961468
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -294,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowMotionTimeScale: 0.1
---- !u!95 &7812029577311595790
+--- !u!95 &885546401
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -304,7 +305,7 @@ Animator:
   m_GameObject: {fileID: 4964869523380961462}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cf4db5108a8b1874692fcde7c19517c8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1306a67d9c17d77448293d25e3785fa2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

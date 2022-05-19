@@ -6,19 +6,41 @@ public class TimeController : MonoBehaviour
     [SerializeField] private Text TimerP;
     [SerializeField] private Text TimerFi;
     [SerializeField] private Text TimerFa;
+    [SerializeField] GameObject Star0;
+    [SerializeField] GameObject Star1;
+    [SerializeField] GameObject Star2;
     public float time;
     float msec;
     float sec;
     float min;
     bool var;
-
     private void Awake()
     {
+        Star0.gameObject.SetActive(false);
+        Star1.gameObject.SetActive(false);
+        Star2.gameObject.SetActive(false);
+
         var = true;
     }
     public void EndTimer()
     {
         var = false;
+
+        if (time <= 12)
+        {
+            Star0.gameObject.SetActive(true);
+            Star1.gameObject.SetActive(true);
+            Star2.gameObject.SetActive(true);
+        }
+        else if (time > 12 && time <= 15)
+        {
+            Star0.gameObject.SetActive(true);
+            Star1.gameObject.SetActive(true);
+        }
+        else if (time > 15 && time <= 18)
+        {
+            Star0.gameObject.SetActive(true);
+        }
     }
     private void Update()
     {
@@ -34,4 +56,5 @@ public class TimeController : MonoBehaviour
             TimerFa.text = "Time " + min + ":" + sec + ":" + msec;
         }
     }
+
 }

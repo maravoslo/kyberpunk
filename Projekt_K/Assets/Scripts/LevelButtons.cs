@@ -11,13 +11,21 @@ public class LevelButtons : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void ExitLevel1()
+    public void ExitTutorial()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
+    public void NextLvlTutorial()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+    public void ExitLevel1()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
     public void ExitLevel2()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
     public void RetryLevel()
     {

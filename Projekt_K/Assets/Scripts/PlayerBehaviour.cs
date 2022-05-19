@@ -15,6 +15,9 @@ public class PlayerBehaviour : MonoBehaviour
     public Rigidbody2D rb2d;
     public GameObject PanelFinish;
     public GameObject PanelFailed;
+    public GameObject MovementPanel;
+    public GameObject DashPanel;
+    public GameObject FindPortalPanel;
     public GameObject TextTime;
     private Vector3 mousePosition;
     private Vector3 currentPosition;
@@ -23,6 +26,8 @@ public class PlayerBehaviour : MonoBehaviour
     private float maxforce = 400f;
     [SerializeField]
     private LineRenderer lr;
+    [SerializeField]
+    private TimeController ceva;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -48,7 +53,7 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 force++;
             }
-            currentPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
+            currentPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             Vector3 direction1 = (new Vector3(currentPosition.x - transform.position.x, currentPosition.y - transform.position.y, 0)).normalized;
             var v = Vector3.Lerp(transform.position, transform.position + direction1 * 3, force / 600f);
             //Debug.Log(currentPosition);
@@ -58,7 +63,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
     public void DashAbility()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)) - transform.position;
+        mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)) - transform.position;
         var = new Vector2(mousePosition.x, mousePosition.y);
         rb2d.velocity = Vector2.zero;
         rb2d.AddForce(var * force, ForceMode2D.Force);
@@ -80,6 +85,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         lr.positionCount = 0;
     }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if ((col.tag == "WallTag") || (col.tag == "ObstacleTag"))
@@ -88,6 +94,7 @@ public class PlayerBehaviour : MonoBehaviour
             bool isActive = PanelFailed.activeSelf;
             PanelFailed.SetActive(!isActive);
             TextTime.gameObject.SetActive(false);
+            ceva.EndTimer();
         }
 
         if (col.tag == "PortalTag")
@@ -96,6 +103,18 @@ public class PlayerBehaviour : MonoBehaviour
             bool isActive = PanelFinish.activeSelf;
             PanelFinish.SetActive(!isActive);
             TextTime.gameObject.SetActive(false);
+            ceva.EndTimer();
+        }
+
+        if (col.tag == "MovementTag")
+        {
+            MovementPanel.gameObject.SetActive(false);
+            DashPanel.gameObject.SetActive(true);
+        }
+        if (col.tag == "DashTag")
+        {
+            DashPanel.gameObject.SetActive(false);
+            FindPortalPanel.gameObject.SetActive(true);
         }
     }
 }

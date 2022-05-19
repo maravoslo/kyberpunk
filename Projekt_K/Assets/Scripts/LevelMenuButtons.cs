@@ -7,15 +7,15 @@ public class LevelMenuButtons : MonoBehaviour
 {
     public void Level1()
     {
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Level2()
     {
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     public void BackButton()
     {
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
     }
 }
