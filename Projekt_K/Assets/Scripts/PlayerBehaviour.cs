@@ -1,13 +1,4 @@
 using UnityEngine;
-/*
-stelute in functie de timpul pe care l scoti
-inamici care trag in tine
-steluta default daca termini lvl indiferent de timp, ca sa poti trece mai departe
-tutorial (daca nu l faci, nu se deschide butonu de level)
-loading screen
-podeaua
-secret room in level 4 in care daca intri, sa primesti o a patra steluta
- */
 public class PlayerBehaviour : MonoBehaviour
 {
     public float speed;
@@ -15,9 +6,6 @@ public class PlayerBehaviour : MonoBehaviour
     public Rigidbody2D rb2d;
     public GameObject PanelFinish;
     public GameObject PanelFailed;
-    public GameObject MovementPanel;
-    public GameObject DashPanel;
-    public GameObject FindPortalPanel;
     public GameObject TextTime;
     private Vector3 mousePosition;
     private Vector3 currentPosition;
@@ -40,14 +28,14 @@ public class PlayerBehaviour : MonoBehaviour
 
         rb2d.velocity = new Vector2(Mathf.Clamp(rb2d.velocity.x, -maxSpeed, maxSpeed), Mathf.Clamp(rb2d.velocity.y, -maxSpeed, maxSpeed));
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(1))
         {
             DashAbility();
             EndLIne();
         }
 
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             if (force < maxforce)
             {
@@ -104,17 +92,6 @@ public class PlayerBehaviour : MonoBehaviour
             PanelFinish.SetActive(!isActive);
             TextTime.gameObject.SetActive(false);
             ceva.EndTimer();
-        }
-
-        if (col.tag == "MovementTag")
-        {
-            MovementPanel.gameObject.SetActive(false);
-            DashPanel.gameObject.SetActive(true);
-        }
-        if (col.tag == "DashTag")
-        {
-            DashPanel.gameObject.SetActive(false);
-            FindPortalPanel.gameObject.SetActive(true);
         }
     }
 }

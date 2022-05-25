@@ -5,19 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelButtons : MonoBehaviour
 {
-    [SerializeField]
-    SlowMotion ceva;
+    [SerializeField] SlowMotion ceva;
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void ExitTutorial()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     public void NextLvlTutorial()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
     public void ExitLevel1()
     {

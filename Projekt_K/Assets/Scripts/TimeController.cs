@@ -9,6 +9,8 @@ public class TimeController : MonoBehaviour
     [SerializeField] GameObject Star0;
     [SerializeField] GameObject Star1;
     [SerializeField] GameObject Star2;
+    public GameObject PanelFinish;
+    public GameObject PanelFailed;
     public float time;
     float msec;
     float sec;
@@ -26,27 +28,32 @@ public class TimeController : MonoBehaviour
     {
         var = false;
 
-        if (time <= 12)
+        if (time <= 15)
         {
             Star0.gameObject.SetActive(true);
             Star1.gameObject.SetActive(true);
             Star2.gameObject.SetActive(true);
         }
-        else if (time > 12 && time <= 15)
+        else if (time > 15 && time <= 17)
         {
             Star0.gameObject.SetActive(true);
             Star1.gameObject.SetActive(true);
         }
-        else if (time > 15 && time <= 18)
+        else if (time > 17 && time <= 20)
         {
             Star0.gameObject.SetActive(true);
+        }
+        else if (time > 20)
+        {
+           PanelFailed.gameObject.SetActive(true);
+           PanelFinish.gameObject.SetActive(false);
         }
     }
     private void Update()
     {
         if (var)
         {
-            time += Time.deltaTime;
+            time = time + Time.deltaTime;
             msec = (int)((time - (int)time) * 100);
             sec = (int)(time % 60);
             min = (int)(time / 60 % 60);

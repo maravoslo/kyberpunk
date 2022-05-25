@@ -15,13 +15,12 @@ public class TrajectoryLine : MonoBehaviour
         points[0] = startPoint;
         points[1] = endPoint;
 
-        // Debug.Log(points[0] +  " " + points[1]);
-
         lr.SetPosition(0, startPoint);
         lr.SetPosition(1, endPoint);
     }
 
     public void EndLIne(){
         lr.positionCount = 0;
+        
     }
 }
