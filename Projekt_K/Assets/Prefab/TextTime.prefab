@@ -95,7 +95,9 @@ MonoBehaviour:
   TimerP: {fileID: 9188780962517298929}
   TimerFi: {fileID: 0}
   TimerFa: {fileID: 0}
-  Star0: {fileID: 0}
-  Star1: {fileID: 0}
-  Star2: {fileID: 0}
+  Star0: {fileID: 3444817437190997235, guid: 10b92b42efb97554788482430c2d4106, type: 3}
+  Star1: {fileID: 3289194093446690613, guid: 59796b262d115b3408db4c7a83a67574, type: 3}
+  Star2: {fileID: 1235845452901158317, guid: ceae1f80bf55eb34e897e92c9c5492f1, type: 3}
+  PanelFinish: {fileID: 0}
+  PanelFailed: {fileID: 0}
   time: 0

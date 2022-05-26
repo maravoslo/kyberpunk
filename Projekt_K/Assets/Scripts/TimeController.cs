@@ -6,9 +6,10 @@ public class TimeController : MonoBehaviour
     [SerializeField] private Text TimerP;
     [SerializeField] private Text TimerFi;
     [SerializeField] private Text TimerFa;
-    [SerializeField] GameObject Star0;
-    [SerializeField] GameObject Star1;
-    [SerializeField] GameObject Star2;
+    [SerializeField] private GameObject Star0;
+    [SerializeField] private GameObject Star1;
+    [SerializeField] private GameObject Star2;
+    [SerializeField] private string LevelName;
     public GameObject PanelFinish;
     public GameObject PanelFailed;
     public float time;
@@ -16,11 +17,16 @@ public class TimeController : MonoBehaviour
     float sec;
     float min;
     bool var;
+    
     private void Awake()
     {
         Star0.gameObject.SetActive(false);
         Star1.gameObject.SetActive(false);
         Star2.gameObject.SetActive(false);
+
+        PlayerPrefs.SetInt("Star0" + LevelName, 0);
+        PlayerPrefs.SetInt("Star1" + LevelName, 0);
+        PlayerPrefs.SetInt("Star2" + LevelName, 0);
 
         var = true;
     }
@@ -33,22 +39,37 @@ public class TimeController : MonoBehaviour
             Star0.gameObject.SetActive(true);
             Star1.gameObject.SetActive(true);
             Star2.gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Star0" + LevelName, 1);
+            PlayerPrefs.SetInt("Star1" + LevelName, 1);
+            PlayerPrefs.SetInt("Star2" + LevelName, 1);
+
         }
-        else if (time > 15 && time <= 17)
+        else if (time > 15 && time <= 20)
         {
             Star0.gameObject.SetActive(true);
             Star1.gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Star0" + LevelName, 1);
+            PlayerPrefs.SetInt("Star1" + LevelName, 1);
+            PlayerPrefs.SetInt("Star2" + LevelName, 0);
         }
-        else if (time > 17 && time <= 20)
+        else if (time > 20 && time <= 25)
         {
             Star0.gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Star0" + LevelName, 1);
+            PlayerPrefs.SetInt("Star1" + LevelName, 0);
+            PlayerPrefs.SetInt("Star2" + LevelName, 0);
         }
-        else if (time > 20)
+        else if (time > 25)
         {
-           PanelFailed.gameObject.SetActive(true);
-           PanelFinish.gameObject.SetActive(false);
+            PanelFailed.gameObject.SetActive(true);
+            PanelFinish.gameObject.SetActive(false);
+            PlayerPrefs.SetInt("Star0" + LevelName, 0);
+            PlayerPrefs.SetInt("Star1" + LevelName, 0);
+            PlayerPrefs.SetInt("Star2" + LevelName, 0);
         }
+        
     }
+
     private void Update()
     {
         if (var)
