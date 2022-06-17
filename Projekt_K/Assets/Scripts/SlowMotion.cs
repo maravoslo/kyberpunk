@@ -17,18 +17,18 @@ public class SlowMotion : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(1)){
             StartSlowMotion();
         }
 
-        if(Input.GetMouseButtonUp(0)){
+        if(Input.GetMouseButtonUp(1)){
             StopSlowMotion();
         }
     }
 
     private void StartSlowMotion(){
         Time.timeScale = slowMotionTimeScale;
-        Time.fixedDeltaTime = startFixedDeltaTIme * slowMotionTimeScale;
+        Time.fixedDeltaTime = startFixedDeltaTIme * slowMotionTimeScale * 0.1f;
     }
 
     public void StopSlowMotion(){

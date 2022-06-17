@@ -13,6 +13,7 @@ public class LevelButtons : MonoBehaviour
     public void ExitTutorial()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Time.timeScale = 1f;
     }
     public void NextLvlTutorial()
     {

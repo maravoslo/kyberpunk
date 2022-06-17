@@ -20,7 +20,6 @@ public class PlayerBehaviour : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
-
     void Update()
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * speed * Time.deltaTime;
@@ -43,7 +42,7 @@ public class PlayerBehaviour : MonoBehaviour
             }
             currentPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             Vector3 direction1 = (new Vector3(currentPosition.x - transform.position.x, currentPosition.y - transform.position.y, 0)).normalized;
-            var v = Vector3.Lerp(transform.position, transform.position + direction1 * 3, force / 600f);
+            var v = Vector3.Lerp(transform.position, transform.position + direction1 * 3, force / 1000f);
             //Debug.Log(currentPosition);
             RenderLine(transform.position, v);
         }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//pause menu fcks up the game, doesn't start after pause, resume, restart or escaping to menu and going back in
 public class Pause : MonoBehaviour
 {
     public static bool isPaused = false;
@@ -42,10 +44,12 @@ public class Pause : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
     }
 
     public void Exit()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        Time.timeScale = 1f;
     }
 }

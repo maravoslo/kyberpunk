@@ -315,7 +315,7 @@ RectTransform:
   - {fileID: 1802110226}
   - {fileID: 502486487}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1053,7 +1053,7 @@ RectTransform:
   - {fileID: 2064673000}
   - {fileID: 1446584318}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2791,7 +2791,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &664778158
 Rigidbody2D:
@@ -3975,6 +3975,10 @@ PrefabInstance:
     - target: {fileID: 4964869523380961462, guid: 78ecee66234e06d4aa5aa51771aaf958, type: 3}
       propertyPath: m_Name
       value: JellyP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964869523380961471, guid: 78ecee66234e06d4aa5aa51771aaf958, type: 3}
+      propertyPath: slowMotionTimeScale
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78ecee66234e06d4aa5aa51771aaf958, type: 3}
@@ -6493,7 +6497,7 @@ RectTransform:
   - {fileID: 955025949}
   - {fileID: 1559665860}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8024,7 +8028,7 @@ Transform:
   m_LocalScale: {x: 0.64197046, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1550828722
 GameObject:
@@ -8711,7 +8715,7 @@ RectTransform:
   - {fileID: 1950093240}
   - {fileID: 1555623502}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9586,7 +9590,7 @@ Transform:
   - {fileID: 1951885643}
   - {fileID: 251529967}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911861491
 GameObject:
@@ -11148,7 +11152,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7818941184991635160, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7818941184991635160, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
       propertyPath: m_LocalPosition.x

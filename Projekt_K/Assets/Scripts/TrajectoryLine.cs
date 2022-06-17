@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
-not working properly
-*/
+
 public class TrajectoryLine : MonoBehaviour
 {
     [SerializeField]

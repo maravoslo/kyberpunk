@@ -9,6 +9,7 @@ public class SavingStars : MonoBehaviour
     [SerializeField] private GameObject Star2;
     [SerializeField] private string LevelName;
 
+    //variabila sa retina doar cel mai bun highscore
     public void Start(){
         //Debug.Log("Aici");
 
