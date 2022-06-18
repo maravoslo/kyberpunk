@@ -3569,6 +3569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1686866266}
   PanelTutorial: {fileID: 747971169}
+  TextTime: {fileID: 934832881}
 --- !u!114 &677435734
 MonoBehaviour:
   m_ObjectHideFlags: 0

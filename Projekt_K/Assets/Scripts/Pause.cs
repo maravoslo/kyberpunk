@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour
     public static bool isPaused = false;
     [SerializeField] GameObject PauseMenu;
     public GameObject PanelTutorial;
+    public GameObject TextTime;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -31,6 +32,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         PanelTutorial.SetActive(true);
+        TextTime.SetActive(true);
     }
 
     private void PauseGame()
@@ -39,6 +41,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
         PanelTutorial.SetActive(false);
+        TextTime.SetActive(false);
     }
 
     public void Restart()

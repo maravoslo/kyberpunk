@@ -6299,6 +6299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 389444870}
   PanelTutorial: {fileID: 91303476}
+  TextTime: {fileID: 1141912302}
 --- !u!114 &1232725771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6760,6 +6761,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7818941184020587619, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
+      propertyPath: m_Text
+      value: Loading...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818941184020587619, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818941184020587619, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818941184020587619, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818941184020587619, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    - target: {fileID: 7818941184020587619, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 7818941184991635160, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6810,7 +6835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7818941184991635162, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7818941184991635163, guid: eac510c25153c9943ac6fb7bd1322238, type: 3}

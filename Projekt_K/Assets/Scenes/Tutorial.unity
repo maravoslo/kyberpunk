@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1802110223}
   PanelTutorial: {fileID: 502486486}
+  TextTime: {fileID: 1587528035}
 --- !u!114 &42507566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3912,6 +3913,18 @@ PrefabInstance:
       propertyPath: FindPortalPanel
       value: 
       objectReference: {fileID: 1428586388}
+    - target: {fileID: 4964869523380961456, guid: 78ecee66234e06d4aa5aa51771aaf958, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964869523380961456, guid: 78ecee66234e06d4aa5aa51771aaf958, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964869523380961456, guid: 78ecee66234e06d4aa5aa51771aaf958, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4964869523380961457, guid: 78ecee66234e06d4aa5aa51771aaf958, type: 3}
       propertyPath: m_RootOrder
       value: 2
